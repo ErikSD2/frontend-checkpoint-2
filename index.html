@@ -5,11 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DH Flix</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
-    <header-component class="header"></header-component>
+    <header>
+      <header-component class="header"></header-component>
+      <div class="ourHero">
+        <div>
+          <h2 class="titleMain">DH Flix</h2>
+          <p class="subMain">
+            Confira a maior coletânea de filmes que a Digital House tem a te
+            oferecer
+          </p>
+          <div class="explorerMain">Explorar</div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <cards-component></cards-component>
+    </main>
 
-    <script src="./js/index.js"></script>
+    <script src="./js/components/header.js "></script>
   </body>
 </html>
