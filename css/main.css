@@ -56,7 +56,10 @@ body {
   padding-top: 9px;
   border: 2px solid green;
 }
-
+.filmesMain{
+  display: flex;
+  justify-content: center;
+}
 .description {
   line-height: 3px;
 }
