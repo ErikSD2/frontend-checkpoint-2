@@ -56,6 +56,50 @@ body {
   padding-top: 9px;
   border: 2px solid green;
 }
+
+.description {
+  line-height: 3px;
+}
+.description h2 {
+  font-size: 65px;
+  font-family: "Roboto", sans-serif;
+}
+
+.text p {
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.director {
+  font-size: 25px;
+}
+
+.director a {
+  font-size: 20px;
+}
+
+.escritor {
+  font-size: 20px;
+}
+
+.escritor h3 {
+  font-size: 30px;
+}
+
+.authors {
+  display: flex;
+  flex-direction: row;
+  line-height: 1%;
+  gap: 200px;
+  font-family: "Roboto", sans-serif;
+}
+
+.video h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  padding: 5px;
+}
+
 .footer {
   color: #fff;
   font-family: Helvetica, Arial, sans-serif;
