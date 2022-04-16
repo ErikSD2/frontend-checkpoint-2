@@ -56,9 +56,14 @@ body {
   padding-top: 9px;
   border: 2px solid green;
 }
-.filmesMain{
-  display: flex;
-  justify-content: center;
+.filmesMain {
+  font-size: 28px;
+  text-align: center;
+  margin-block: 40px;
+}
+.componentMain{
+  max-width: 1350px;
+  margin: auto;
 }
 .description {
   line-height: 3px;
