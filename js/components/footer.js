@@ -1,18 +1,23 @@
 class FooterComponent extends HTMLElement {
 
     members = [
+        {nome: 'Gabriel Henrique', funcao: 'Componentização', linkedin: '#', github: 'https://github.com/pouthergust'},
+        {nome: 'Erik Dornellas', funcao: 'Página home', linkedin: '#', github: 'https://github.com/ErikSD2'},
         {nome: 'Mahiny Andrade', funcao: 'Estilização', linkedin: 'https://www.linkedin.com/in/mahiny/', github: 'https://github.com/mahiny'},
+        {nome: 'Wagner Morais', funcao: 'Página de video', linkedin: 'https://www.linkedin.com/in/wagner-morais-araujo-646375118', github: 'https://github.com/wagner2700'},
     ];
 
     constructor() {
         super();
-        this.build()
+        this.shadow = this.build()
     }
 
     build() {
         let shadow = this.attachShadow({ mode: 'open' });
         shadow.appendChild(this.styles());
         shadow.appendChild(this.component())
+        this.memberComponent()
+        return shadow
     }
 
     component() {
@@ -20,61 +25,78 @@ class FooterComponent extends HTMLElement {
         div.setAttribute('class', 'footer__container');
 
         div.innerHTML = `
-        <div class="members__wrapper">
-            ${
-                this.members.map(membersInfo => {
-                    this.memberComponent(membersInfo)
-                })
-            }
-        </div>
+        <div class="members__wrapper"></div>
         <p class="footer__note">Checkpoint 3 desenvolvido em 2022</p>
         `;
 
         return div
     }
 
-    memberComponent(members) {
-        let div = document.createElement('div');
-        div.setAttribute('class', 'members');
+    memberComponent() {
 
-        let {nome, funcao, linkedin, github} = members;
+        let membersWrapper = this.shadowRoot.querySelector('.members__wrapper')   
+        console.log(membersWrapper)
+        this.members.forEach(member => {
+            let div = document.createElement('div');
+            div.setAttribute('class', 'members');
 
-        div.innerHTML = `
-        <h2>${nome}</h2>
-        <p>${funcao}</p>
-        <div class="social-media">
-            <a class="brand" href="${linkedin}"><i class="brand linkedin"></i></a>
-            <a class="brand" href="${github}"><i class="brand github"></i></a>
-        </div>
-        `;
+            let {nome, funcao, linkedin, github} = member;
 
-        return div
+            div.innerHTML = `
+            <h2>${nome}</h2>
+            <p>${funcao}</p>
+            <div class="social-media">
+                <a class="brand" href="${linkedin}"><i class="brand linkedin"></i></a>
+                <a class="brand" href="${github}"><i class="brand github"></i></a>
+            </div>
+            `;
+
+            membersWrapper.appendChild(div)
+        })        
     }
 
     styles() {
         let style = document.createElement('style');
         style.innerHTML = `
-            .footer {
-                background: #171717;
-                color: #fff;
-                font-family: Helvetica, Arial, sans-serif;
-                text-align: center;
-                margin-top: 40px;
-            }
-            
+            * {
+                box-sizing: border-box;
+            }       
+
             .footer__container {
+                background: #171717;
                 align-items: center;
                 display: flex;
                 flex-direction: column;
                 margin: 0 auto;
-                max-width: 1200px;
-                padding: 10px 40px;
+                margin-top: 80px;
+                padding: 48px 40px;
             }
             
             .members__wrapper {
-                display: flex;
+                display: grid;
                 gap: 20px;
-                justify-content: space-between;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                padding-bottom: 48px;
+                width: 100%;
+            }
+
+
+            .members {
+                background: #fff0;
+                border-radius: 7px;
+                margin: auto;
+                cursor: initial;
+                padding: 15px 20px;
+                width: 100%;
+            }
+
+            .members:hover {
+                background: #ffffff1f;
+            }
+
+            h2 {
+                margin-top: 0;
+                white-space: nowrap;
             }
             
             .footer__note {
@@ -90,9 +112,9 @@ class FooterComponent extends HTMLElement {
             .brand {
                 background: var(--color-terceary);
                 /* border-radius: 50%; */
-                height: 30px;  
+                height: 24px;  
                 text-align: center;
-                width: 30px;
+                width: 24px;
                 display: block;
                 filter: brightness(10) contrast(0) opacity(.5);
             }
