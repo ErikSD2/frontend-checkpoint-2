@@ -17,7 +17,7 @@ class HeaderComponent extends HTMLElement {
         let div = document.createElement('div');
         div.setAttribute('class', 'header__container');
         div.innerHTML = `
-            <img src="./assets/img/logo-dh.png" alt="Logo">
+            <img src="./../assets/img/logo-dh.png" alt="Logo">
             <nav class="nav">
             <ul class="nav__list">
                 <li class="active"><a href="#">Home</a></li>

@@ -1,8 +1,8 @@
 class FooterComponent extends HTMLElement {
 
     members = [
-        {nome: 'Gabriel Henrique', funcao: 'Componentização', linkedin: '#', github: 'https://github.com/pouthergust'},
         {nome: 'Erik Dornellas', funcao: 'Página home', linkedin: '#', github: 'https://github.com/ErikSD2'},
+        {nome: 'Gabriel Henrique', funcao: 'Componentização', linkedin: '#', github: 'https://github.com/pouthergust'},
         {nome: 'Mahiny Andrade', funcao: 'Estilização', linkedin: 'https://www.linkedin.com/in/mahiny/', github: 'https://github.com/mahiny'},
         {nome: 'Wagner Morais', funcao: 'Página de video', linkedin: 'https://www.linkedin.com/in/wagner-morais-araujo-646375118', github: 'https://github.com/wagner2700'},
     ];
