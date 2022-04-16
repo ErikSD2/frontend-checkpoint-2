@@ -57,7 +57,11 @@ class FooterComponent extends HTMLElement {
 
     styles() {
         let style = document.createElement('style');
-        style.innerHTML = `          
+        style.innerHTML = `
+            * {
+                box-sizing: border-box;
+            }       
+
             .footer__container {
                 background: #171717;
                 align-items: center;
@@ -65,16 +69,33 @@ class FooterComponent extends HTMLElement {
                 flex-direction: column;
                 margin: 0 auto;
                 margin-top: 80px;
-                padding: 10px 40px;
+                padding: 48px 40px;
             }
             
             .members__wrapper {
-                display: flex;
+                display: grid;
                 gap: 20px;
-                justify-content: space-between;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                padding-bottom: 48px;
+                width: 100%;
+            }
+
+
+            .members {
+                background: #fff0;
+                border-radius: 7px;
+                margin: auto;
+                cursor: initial;
+                padding: 15px 20px;
+                width: 100%;
+            }
+
+            .members:hover {
+                background: #ffffff1f;
             }
 
             h2 {
+                margin-top: 0;
                 white-space: nowrap;
             }
             
@@ -91,9 +112,9 @@ class FooterComponent extends HTMLElement {
             .brand {
                 background: var(--color-terceary);
                 /* border-radius: 50%; */
-                height: 30px;  
+                height: 24px;  
                 text-align: center;
-                width: 30px;
+                width: 24px;
                 display: block;
                 filter: brightness(10) contrast(0) opacity(.5);
             }

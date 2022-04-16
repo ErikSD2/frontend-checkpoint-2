@@ -33,7 +33,6 @@ class HeaderComponent extends HTMLElement {
 
     eventsComponents() {
         let listItems = this.shadowRoot.querySelectorAll('li');
-        console.log(listItems)
         listItems.forEach(item => {
             item.addEventListener('click', () => {
                 listItems.forEach(item => {
