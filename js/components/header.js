@@ -1,16 +1,16 @@
 class HeaderComponent extends HTMLElement {
     constructor() {
         super();
-        this.build();
+        this.shadow = this.build();
+        this.eventsComponents();
     }
     
     build() {
         let shadow = this.attachShadow({ mode: 'open' });
         shadow.appendChild(this.styles());
         shadow.appendChild(this.component());
-        // let node = this.shadow.querySelector('#shadow-root')
-        // this.eventsComponents(node);
-        // this.eventsComponents();
+       
+        return shadow
     }
 
     component() {
@@ -31,10 +31,8 @@ class HeaderComponent extends HTMLElement {
         return div;
     }
 
-    eventsComponents(node) {
-        // let listItems = document.querySelectorAll('header-component::shadow li');
-        let listItems = node
-        console.log(listItems)
+    eventsComponents() {
+        let listItems = this.shadowRoot.querySelectorAll('li');
         listItems.forEach(item => {
             item.addEventListener('click', () => {
                 listItems.forEach(item => {
