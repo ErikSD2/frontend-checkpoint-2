@@ -18,6 +18,7 @@ class HeaderComponent extends HTMLElement {
         div.setAttribute('class', 'header__container');
         div.innerHTML = `
             <img src="./../assets/img/logo-dh.png" alt="Logo">
+            <img class="menu-mobile" src="./../assets/img/menu.png" alt="menu">
             <nav class="nav">
             <ul class="nav__list">
                 <li class="active"><a href="#">Home</a></li>
@@ -63,6 +64,11 @@ class HeaderComponent extends HTMLElement {
             width: 100%;
             z-index: 1;
         }
+
+        .menu-mobile {
+            display: none;
+            cursor: pointer;
+        }
         
         .nav__list {
             display: flex;
@@ -88,6 +94,11 @@ class HeaderComponent extends HTMLElement {
         .active {
             color: #E51B3E;
             font-weight: bold;
+        }
+
+        @media screen and (max-width: 768px) {
+            .menu-mobile { display: block; }
+            .nav { display: none; }
         }
         `;
 
