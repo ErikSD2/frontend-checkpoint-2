@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  padding-top: 80px;
+}
+
+.header {
+  min-height: 80px;
+}
+
+.cards__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 0 40px;
+}
+
+.flexDirection {
+  flex-direction: column;
+}
