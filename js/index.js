@@ -1,6 +1,11 @@
-// let teste = fetch('https://imdb-api.com/en/API/Title/k_1234567/tt1832382', requestOptions)
-//   .then(response => response.text())
-//   .then(result => console.log(result))
-//   .catch(error => console.log('error', error));
+    
+async function buscarFilme(filme, trailer) {
+    await fetch(`https://imdb-api.com/pt-BR/API/Title/k_lnmf1a2b/${filme}`)
+    .then(response => response.text())
+    .then(result => localStorage.setItem('filme', result))
+    .catch(error => console.log('error', error));
 
-// console.log(teste);
+    localStorage.setItem('trailer', trailer);
+
+    window.location.href = 'filme.html'
+}

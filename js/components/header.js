@@ -15,18 +15,20 @@ class HeaderComponent extends HTMLElement {
 
     component() {
         let div = document.createElement('div');
-        div.setAttribute('class', 'header__container');
+        div.setAttribute('class', 'header__wrapper');
         div.innerHTML = `
-            <img src="./../assets/img/logo-dh.png" alt="Logo">
-            <img class="menu-mobile" src="./../assets/img/menu.png" alt="menu">
-            <nav class="nav">
-            <ul class="nav__list">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Itens</a></li>
-                <li><a href="#">Sobre Nós</a></li>
-                <li><a href="#">Login</a></li>
-            </ul>
-            </nav>
+            <div class="header__container">
+                <img src="./../assets/img/logo-dh.png" alt="Logo">
+                <img class="menu-mobile" src="./../assets/img/menu.png" alt="menu">
+                <nav class="nav">
+                <ul class="nav__list">
+                    <li class="active"><a href="./index.html">Home</a></li>
+                    <li><a href="index.html#filmes">Itens</a></li>
+                    <li><a href="#footer">Sobre Nós</a></li>
+                    <li><a href="#">Login</a></li>
+                </ul>
+                </nav>
+            </div>
         `;
 
         return div;
@@ -53,16 +55,21 @@ class HeaderComponent extends HTMLElement {
             margin: 0;
         }
         
-        .header__container {
-            align-items: center;
+        .header__wrapper {
             background-color: #fff;
-            display: flex;
-            justify-content: space-between;
-            padding: 10px 40px;
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 1;
+        }
+
+        .header__container {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 40px;
+            max-width: 1350px;
+            margin: auto;
         }
 
         .menu-mobile {

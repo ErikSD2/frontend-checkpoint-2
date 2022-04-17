@@ -16,6 +16,12 @@ body {
   width: 100%;
 }
 
+.photo img {
+  max-height: 700px;
+  object-fit: cover;
+  width: 100%;
+}
+
 .cards__container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -28,15 +34,17 @@ body {
   font-size: 2.8rem;
 }
 .ourHero {
-  display: grid;
-  place-items: center;
-  height: 100vh;
-  width: 100vw;
   background-image: url(../assets/img/hero.png);
-  background-size: cover;
   background-position-x: center;
   background-position-y: center;
+  background-size: cover;
+  display: grid;
+  height: 100vh;
+  padding: 0 40px;
+  place-items: center;
+  width: 100vw;
 }
+
 .subMain {
   margin-block: 15px;
   color: white;
@@ -45,29 +53,44 @@ body {
 }
 
 .explorerMain {
-  color: white;
-  display: grid;
-  text-align: center;
-  box-sizing: border-box;
   border-radius: 4px;
-  margin: auto;
-  width: 100px;
-  height: 40px;
-  padding-top: 9px;
   border: 2px solid green;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  display: grid;
+  height: 40px;
+  margin: auto;
+  padding-top: 9px;
+  text-align: center;
+  text-decoration: none;
+  transition: transform .1s ease;
+  width: 100px;
 }
+
+.explorerMain:active {
+  transform: scale(.95);
+}
+
 .filmesMain {
   font-size: 28px;
   text-align: center;
   margin-block: 40px;
 }
+
 .componentMain{
   max-width: 1350px;
   margin: auto;
 }
+
+.main__wrapper {
+  max-width: 1350px;
+  padding: 0 40px 0;
+  margin: auto;
+}
+
 .description {
   line-height: 3px;
-  padding: 5px 80px;
 }
 
 .description h2 {
@@ -78,12 +101,10 @@ body {
 .text p {
   font-size: 20px;
   font-family: 'Times New Roman', Times, serif;
-  padding: 5px 80px;
 }
 
 .director {
   font-size: 25px;
-  padding: 5px 80px;
 }
 
 .director a {
@@ -101,6 +122,7 @@ body {
 
 .escritor a {
   text-decoration: none;
+  margin-right: 15px;
 }
 
 .authors {
@@ -115,14 +137,12 @@ body {
   font-size: 30px;
   font-family: 'Trebuchet MS', sans-serif;
   display: grid;
-  padding: 5px 80px;
   padding-top: 20px;
 }
 
 .youtube {
   width: 100%;
-  height: 800px;
-  padding: 0 80px;
+  height: 650px;
 }
 
 

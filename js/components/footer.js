@@ -26,7 +26,7 @@ class FooterComponent extends HTMLElement {
 
         div.innerHTML = `
         <div class="members__wrapper"></div>
-        <p class="footer__note">Checkpoint 3 desenvolvido em 2022</p>
+        <p class="footer__note">&copy; Checkpoint 2 desenvolvido em 2022</p>
         `;
 
         return div
@@ -63,20 +63,22 @@ class FooterComponent extends HTMLElement {
             }       
 
             .footer__container {
-                background: #171717;
                 align-items: center;
+                background: #171717;
                 display: flex;
                 flex-direction: column;
-                margin: 0 auto;
                 margin-top: 80px;
-                padding: 48px 40px;
+                margin: 64px auto 0;
+                padding: 48px 0;
             }
             
             .members__wrapper {
                 display: grid;
                 gap: 20px;
                 grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                max-width: 1350px;
                 padding-bottom: 48px;
+                padding-inline: 40px;
                 width: 100%;
             }
 
@@ -84,8 +86,8 @@ class FooterComponent extends HTMLElement {
             .members {
                 background: #fff0;
                 border-radius: 7px;
-                margin: auto;
                 cursor: initial;
+                margin: auto;
                 padding: 15px 20px;
                 width: 100%;
             }
