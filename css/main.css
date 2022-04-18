@@ -3,6 +3,23 @@
   font-family: Helvetica, Arial, sans-serif;
 }
 
+::selection {
+  background-color: #e51b3ddf;
+  color: white;
+}
+
+html, body {
+  -webkit-scroll-behavior: smooth;
+  -moz-scroll-behavior: smooth;
+  -o-scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
+
+  -webkit-scroll-padding-top: 40px;
+  -moz-scroll-padding-top: 40px;
+  -o-scroll-padding-top: 40px;
+  scroll-padding-top: 40px;
+}
+
 body {
   margin: 0;
   overflow-x: hidden;
@@ -17,7 +34,8 @@ body {
 }
 
 .photo img {
-  max-height: 700px;
+  /* max-height: 700px; */
+  height: 100vh;
   object-fit: cover;
   width: 100%;
 }
@@ -33,6 +51,7 @@ body {
   color: red;
   font-size: 2.8rem;
 }
+
 .ourHero {
   background-image: url(../assets/img/hero.png);
   background-position-x: center;
@@ -64,8 +83,14 @@ body {
   padding-top: 9px;
   text-align: center;
   text-decoration: none;
-  transition: transform .1s ease;
+  transition: transform, width .1s ease;
   width: 100px;
+}
+
+.explorerMain:hover {
+  background-color: rgba(0, 128, 0, 0.407);
+  color: white;
+  width: 140px;
 }
 
 .explorerMain:active {
@@ -78,7 +103,11 @@ body {
   margin-block: 40px;
 }
 
-.componentMain{
+:where(.classification, .classification img)::selection {
+  background-color: transparent;
+}
+
+.componentMain {
   max-width: 1350px;
   margin: auto;
 }
@@ -100,16 +129,22 @@ body {
 
 .text p {
   font-size: 20px;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .director {
   font-size: 25px;
 }
 
-.director a {
+a {
   font-size: 20px;
   text-decoration: none;
+  color: rgba(0, 133, 255, 0.75);
+  margin-right: 15px;
+}
+
+a:hover {
+  color: rgba(255, 0, 0, 0.655);
 }
 
 .escritor {
@@ -118,11 +153,6 @@ body {
 
 .escritor h3 {
   font-size: 30px;
-}
-
-.escritor a {
-  text-decoration: none;
-  margin-right: 15px;
 }
 
 .authors {
