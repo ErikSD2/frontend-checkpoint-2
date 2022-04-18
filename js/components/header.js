@@ -18,8 +18,8 @@ class HeaderComponent extends HTMLElement {
         div.setAttribute('class', 'header__wrapper');
         div.innerHTML = `
             <div class="header__container">
-                <img src="./../assets/img/logo-dh.png" alt="Logo">
-                <img class="menu-mobile" src="./../assets/img/menu.png" alt="menu">
+                <img src="./assets/img/logo-dh.png" alt="Logo">
+                <img class="menu-mobile" src="./assets/img/menu.png" alt="menu">
                 <nav class="nav">
                 <ul class="nav__list">
                     <li class="active"><a href="./index.html">Home</a></li>
