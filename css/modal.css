@@ -41,10 +41,10 @@ input {
   border-radius: 12px;
 }
 
-.modal-container label {
+label {
   display: flex;
-
-
+  justify-content: flex-start;
+  margin-left: 20px;
 }
 
 button {
