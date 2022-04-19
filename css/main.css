@@ -80,7 +80,7 @@ body {
   display: grid;
   height: 40px;
   margin: auto;
-  padding-top: 9px;
+  padding-top: 7px;
   text-align: center;
   text-decoration: none;
   transition: transform, width .1s ease;
