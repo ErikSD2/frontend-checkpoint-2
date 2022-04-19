@@ -1,62 +1,66 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Joker</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Joker</title>
-  <link rel="stylesheet" href="./css/main.css">
-</head>
+  <body>
+    <header>
+      <header-component class="header"></header-component>
+      <div class="photo">
+        <img id="image" src="./assets/img/image 9.svg" alt="" />
+      </div>
+    </header>
 
-<body>
-  <header>
-    <header-component class="header"></header-component>
-    <div class="photo">
-      <img id="image" src="./assets/img/image 9.svg" alt="">
-    </div>
-  </header>
-  
-  <main>  
-    <div class="main__wrapper">
-      <div class="description">
-        <h2 id="title"> </h2>
-        <div class="classification">
-          <img src="./assets/img/star-1.svg" alt="">
-          <img src="./assets/img/star-1.svg" alt="">
-          <img src="./assets/img/star-1.svg" alt="">
-          <img src="./assets/img/star-1.svg" alt="">
-          <img src="./assets/img/star-1.svg" alt="">
+    <main>
+      <div class="main__wrapper">
+        <div class="description">
+          <h2 id="title"></h2>
+          <div class="classification">
+            <img src="./assets/img/star-1.svg" alt="" />
+            <img src="./assets/img/star-1.svg" alt="" />
+            <img src="./assets/img/star-1.svg" alt="" />
+            <img src="./assets/img/star-1.svg" alt="" />
+            <img src="./assets/img/star-1.svg" alt="" />
+          </div>
+        </div>
+        <div class="text">
+          <p id="plot"></p>
+        </div>
+        <div class="authors">
+          <div class="director">
+            <h3>Diretor</h3>
+          </div>
+          <div class="escritor">
+            <h3>Escritores</h3>
+          </div>
+        </div>
+        <div class="video">
+          <h1>Trailer</h1>
+        </div>
+        <div class="youtube-wrapper">
+          <iframe
+            class="youtube"
+            src="https://www.youtube.com/embed/t433PEQGErc"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
         </div>
       </div>
-      <div class="text">
-        <p id="plot"> </p>
-      </div>
-      <div class="authors">
-        <div class="director">
-          <h3>Diretor</h3>
-        </div>
-        <div class="escritor">
-          <h3>Escritores</h3>
-        </div>
-      </div>
-      <div class="video">
-        <h1>Trailer</h1>
-      </div>
-      <div class="youtube-wrapper">
-        <iframe class="youtube" src="https://www.youtube.com/embed/t433PEQGErc" title="YouTube video player"
-          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
-      </div>
-    </div>
-  </main>
+    </main>
 
-  <footer id="footer">
-    <footer-component class="footer"></footer-component>
-  </footer>
+    <footer id="footer">
+      <footer-component class="footer"></footer-component>
+    </footer>
 
-  <script src="./js/components/footer.js"></script>
-  <script src="./js/components/header.js"></script>
-  <script src="./js/filme.js"></script>
-</body>
+    <script src="./js/components/footer.js"></script>
+    <script src="./js/components/header.js"></script>
+    <script src="./js/filme.js"></script>
+  </body>
 </html>
