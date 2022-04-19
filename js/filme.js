@@ -1,5 +1,13 @@
 let filme = localStorage.getItem('filme');
-let {title, image, plot, directors, writerList} = JSON.parse(filme)
+let {id, title, image, plot, directors, writerList} = JSON.parse(filme)
+
+if( id == null ) {
+    let main = document.querySelector('main');
+    main.innerHTML = ``
+
+    let img = document.querySelector('#image');
+    img.style.background = `center / 70% url(./assets/img/404.png) no-repeat`; 
+}
 
 let imgImage = document.querySelector('#image');
 imgImage.src = image;
