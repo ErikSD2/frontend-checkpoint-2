@@ -44,6 +44,26 @@ class HeaderComponent extends HTMLElement {
                 item.classList.add('active');
             })
         })
+        let menuBurger = this.shadowRoot.querySelector('.menu-mobile');
+        menuBurger.addEventListener('click', () =>{
+            document.body.scrollTop = 0;   
+            document.documentElement.scrollTop = 0;
+            let menuContent = document.querySelector('.menu-content');
+            menuContent.classList.remove('hidden');
+        })
+        let closeButton = document.querySelector('.close');
+        closeButton.addEventListener('click', () =>{
+            let menuContent = document.querySelector('.menu-content');
+            menuContent.classList.add('hidden');
+        })
+        let listMenu = document.querySelectorAll('.menu-content li');
+        listMenu.forEach(item => {
+            item.addEventListener('click', () => {
+            
+            let menuContent = document.querySelector('.menu-content');
+            menuContent.classList.add('hidden');
+
+        })})
     }
 
     styles() {

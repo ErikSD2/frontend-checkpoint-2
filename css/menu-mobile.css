@@ -5,9 +5,15 @@
   width: 100vw;
   z-index: 2;
   position: absolute;
+  top: 0;
+  transition: transform 0.3s ease-in-out;
 }
 
+.hidden {
+  transform: translateX(100vw);
+}
 .menu-content img {
+  cursor: pointer;
   height: 20px;
   object-fit: contain;
   margin: 10px;
@@ -26,13 +32,20 @@
   text-align: center;
 }
 .menu-content li {
+  margin-top: 15px;
   padding: 10px 20px;
   transition: padding 0.3s ease-in-out;
 }
 
+.menu-content a {
+  text-decoration: none;
+  color: black;
+}
+
 .menu-content li:hover {
-  padding: 15px 25px;
-  margin-top: 15px;
   background-color: rgba(255, 0, 0, 0.655);
+}
+
+.menu-content li:hover a {
   color: white;
 }
