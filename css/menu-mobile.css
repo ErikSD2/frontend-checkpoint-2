@@ -1,0 +1,12 @@
+.backdrop {
+    position: absolute;
+    width: 100vw;
+    z-index: 2;
+}
+
+.menu-content {
+    background-color: white;
+    height: 100vh;
+    margin-left: auto;
+    width: 30%;
+}
