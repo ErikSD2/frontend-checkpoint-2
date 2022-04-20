@@ -36,3 +36,5 @@ let youtube = document.querySelector('.youtube');
 let trailer = localStorage.getItem('trailer');
 youtube.setAttribute('src', trailer);
 
+let tituloFilme = document.querySelector('title');
+tituloFilme.innerHTML = `${titile} - DH Flix`;
