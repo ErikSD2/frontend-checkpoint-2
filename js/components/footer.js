@@ -34,8 +34,7 @@ class FooterComponent extends HTMLElement {
 
     memberComponent() {
 
-        let membersWrapper = this.shadowRoot.querySelector('.members__wrapper')   
-        console.log(membersWrapper)
+        let membersWrapper = this.shadowRoot.querySelector('.members__wrapper')
         this.members.forEach(member => {
             let div = document.createElement('div');
             div.setAttribute('class', 'members');

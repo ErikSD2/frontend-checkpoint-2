@@ -1,5 +1,5 @@
 let filme = localStorage.getItem('filme');
-let {id, title, image, plot, directors, writerList} = JSON.parse(filme)
+let {id, title = "404", image, plot, directors, writerList} = JSON.parse(filme)
 
 if( id == null ) {
     let main = document.querySelector('main');
@@ -12,20 +12,20 @@ if( id == null ) {
 let imgImage = document.querySelector('#image');
 imgImage.src = image;
 
-let divTitle = document.querySelector('#title');
+let divTitle = document.querySelector('title');
 divTitle.innerHTML = title;
 
 let divPlot = document.querySelector('#plot');
-divPlot.innerHTML = plot;
+if (!!divPlot) divPlot.innerHTML = plot;
 
 let divDirector = document.querySelector('.director');
 let achorDirector = document.createElement('a');
 achorDirector.setAttribute('href', '#');
 achorDirector.innerHTML = directors;
-divDirector.appendChild(achorDirector);
+if(!!divDirector) divDirector.appendChild(achorDirector);
 
 let divWriter = document.querySelector('.escritor');
-writerList.map(writer => {
+if(!!writerList) writerList.map(writer => {
     let achorWriter = document.createElement('a');
     achorWriter.setAttribute('href', '#');
     achorWriter.innerHTML = writer.name;
@@ -34,10 +34,12 @@ writerList.map(writer => {
 
 let youtube = document.querySelector('.youtube');
 let trailer = localStorage.getItem('trailer');
-youtube.setAttribute('src', trailer);
+if(!!youtube) youtube.setAttribute('src', trailer);
 
 let tituloFilme = document.querySelector('title');
-if(tituloFilme)
-tituloFilme.innerHTML = `${title} - DH Flix`;
-
-console.log(`${titile} - DH Flix`);
+if(title == null){ 
+    tituloFilme.innerHTML = `404`;
+}
+else
+    tituloFilme.innerHTML = `${title} - DH Flix`;
+    

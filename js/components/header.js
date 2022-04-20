@@ -52,7 +52,7 @@ class HeaderComponent extends HTMLElement {
             menuContent.classList.remove('hidden');
         })
         let closeButton = document.querySelector('.close');
-        closeButton.addEventListener('click', () =>{
+        if(!!closeButton) closeButton.addEventListener('click', () =>{
             let menuContent = document.querySelector('.menu-content');
             menuContent.classList.add('hidden');
         })
