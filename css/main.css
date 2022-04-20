@@ -86,7 +86,7 @@ header {
   display: grid;
   height: 40px;
   margin: auto;
-  padding-top: 7px;
+  padding-top: 9px;
   text-align: center;
   text-decoration: none;
   transition: transform, width 0.1s ease;
