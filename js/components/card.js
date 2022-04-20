@@ -97,7 +97,7 @@ class CardComponent extends HTMLElement {
                 display: flex;
                 flex-direction: column;
                 padding: 24px 16px;
-                height: initial;
+                height: 35%;
                 transition: all .5s ease;
             }
             

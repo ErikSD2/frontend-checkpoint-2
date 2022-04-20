@@ -44,6 +44,14 @@ header {
   height: 100vh;
   object-fit: cover;
   width: 100%;
+  margin: auto;
+}
+
+.photo .modal-img {
+  object-fit: cover;
+  height: auto;
+  width: 60%;
+  margin: auto;
 }
 
 .cards__container {

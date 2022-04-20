@@ -7,10 +7,29 @@
     <title>DH Flix</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/modal.css" />
     <link rel="stylesheet" href="./css/menu-mobile.css" />
   </head>
   <body>
     <header>
+      <div class="backdrop displayNone">
+        <div class="modal-container">
+          <div class="photo">
+            <img class="modal-img" src="./assets/img/image 1.svg" alt="">
+          </div>
+          <div class="login">
+            <div class="label">
+              <label for="login">Email</label>
+              <input type="mailtoo" name="mailtoo" id="">
+    
+              <label for="password">Senha</label>
+              <input type="password">
+            </div>
+              <button>Entrar</button>
+          </div>
+          </div>
+        </div>
+      </div>
       <div class="menu-content hidden">
         <img class="close" src="./assets/img/xButton.png" alt="fechar" />
         <nav>
@@ -48,5 +67,6 @@
     <script src="./js/components/card.js"></script>
     <script src="./js/components/footer.js"></script>
     <script src="./js/index.js"></script>
+    <script src="./js/login.js"></script>
   </body>
 </html>

@@ -22,16 +22,22 @@ class HeaderComponent extends HTMLElement {
                 <img class="menu-mobile" src="./assets/img/menu.png" alt="menu">
                 <nav class="nav">
                 <ul class="nav__list">
-                    <li class="active"><a href="./index.html">Home</a></li>
+                    <li class="active"><a href="./index.html#">Home</a></li>
                     <li><a href="index.html#filmes">Itens</a></li>
                     <li><a href="#footer">Sobre Nós</a></li>
-                    <li><a href="#">Login</a></li>
+                    <li><a href="#" data-login>Login</a></li>
                 </ul>
                 </nav>
             </div>
         `;
 
         return div;
+    }
+
+    login() {
+        console.log('Aooba')
+        let login = document.querySelector('.backdrop');
+        login.classList.remove('displayNone');
     }
 
     eventsComponents() {
@@ -62,8 +68,11 @@ class HeaderComponent extends HTMLElement {
             
             let menuContent = document.querySelector('.menu-content');
             menuContent.classList.add('hidden');
-
         })})
+        let loginButton = this.shadowRoot.querySelector('[data-login]');
+        loginButton.addEventListener('click', () => {
+            this.login();
+        })
     }
 
     styles() {
