@@ -117,7 +117,7 @@ class CardComponent extends HTMLElement {
                 border-radius: 7px;
                 cursor: pointer;
                 color: #fff;
-                height: 40px;
+                min-height: 40px;
                 transition: background-color .5s ease;
                 pointer-events: all;
             }
