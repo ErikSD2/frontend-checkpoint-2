@@ -18,16 +18,18 @@ divTitle.innerHTML = title;
 let divPlot = document.querySelector('#plot');
 if (!!divPlot) divPlot.innerHTML = plot;
 
-let divDirector = document.querySelector('.director');
+let divDirector = document.querySelector('.director__name');
 let achorDirector = document.createElement('a');
 achorDirector.setAttribute('href', '#');
+achorDirector.classList.add('elenco');
 achorDirector.innerHTML = directors;
 if(!!divDirector) divDirector.appendChild(achorDirector);
 
-let divWriter = document.querySelector('.escritor');
+let divWriter = document.querySelector('.escritores__list');
 if(!!writerList) writerList.map(writer => {
     let achorWriter = document.createElement('a');
     achorWriter.setAttribute('href', '#');
+    achorWriter.classList.add('elenco');
     achorWriter.innerHTML = writer.name;
     divWriter.appendChild(achorWriter);
 })

@@ -23,6 +23,10 @@ body {
 
 body {
   margin: 0;
+  
+  -webkit-overflow-x: hidden;
+  -moz-overflow-x: hidden;
+  -o-overflow-x: hidden;
   overflow-x: hidden;
 }
 
@@ -169,11 +173,20 @@ header {
   font-size: 30px;
 }
 
+.elenco {
+  white-space: nowrap;
+}
+
+.escritores__list {
+  display: flex;
+  gap: 25px;
+}
+
 .authors {
   display: flex;
   flex-direction: row;
   line-height: 1%;
-  gap: 200px;
+  justify-content: space-between;
   font-family: "Roboto", sans-serif;
 }
 
@@ -194,4 +207,10 @@ header {
   font-family: Helvetica, Arial, sans-serif;
   text-align: center;
   margin-top: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .escritores__list {
+    flex-direction: column;
+  }
 }
