@@ -40,13 +40,24 @@ label {
   margin-left: 20px;
 }
 
-button {
-  width: 543px;
-  height: 50px;
-  border-radius: 12px;
+.modal__button {
   background-color: #33BB69;
+  border-radius: 12px;
   border: none;
-  color: white;
+  color: #fff;
+  cursor: pointer;
+  height: 50px;
+  transition: background-color, transform .3s ease;
+  width: 543px;
+}
+
+.modal__button:hover {
+  background-color: #2E9F5E;
+}
+
+.modal__button:active {
+  background-color: #2E9F5E;
+  transform: scale(.98);
 }
 
 .photo {
