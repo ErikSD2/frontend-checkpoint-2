@@ -43,16 +43,16 @@ class CardComponent extends HTMLElement {
     }
 
     eventsComponents() {
-        let description = this.shadowRoot.querySelectorAll('.card__description');
-        description.forEach((item, index) => {
-            item.addEventListener('mouseenter', () => {
-                item.innerHTML = this.cards[index].description;
+        let cards = this.shadowRoot.querySelectorAll('.card');
+        cards.forEach((card, index) => {
+            card.addEventListener('mouseenter', () => {
+                let description = this.shadowRoot.querySelectorAll('.card__description');
+                description[index].innerHTML = this.cards[index].description;
             })
-        })
 
-        description.forEach((item, index) => {
-            item.addEventListener('mouseout', () => {
-                item.innerHTML = `${this.cards[index].description.substr(0,42)}...`;
+            card.addEventListener('mouseout', () => {
+                let description = this.shadowRoot.querySelectorAll('.card__description');
+                description[index].innerHTML = `${this.cards[index].description.substr(0,42)}...`;
             })
         })
     }
@@ -90,7 +90,7 @@ class CardComponent extends HTMLElement {
             
             .card__info {
                 background-color: #F4F4F4;
-                bottom: 4px;
+                bottom: 3px;
                 border-radius: 7px;
                 position: absolute;
                 width: 100%;
@@ -99,6 +99,7 @@ class CardComponent extends HTMLElement {
                 padding: 24px 16px;
                 height: 35%;
                 transition: all .5s ease;
+                pointer-events: none;
             }
             
             .card__title {
@@ -118,6 +119,7 @@ class CardComponent extends HTMLElement {
                 color: #fff;
                 height: 40px;
                 transition: background-color .5s ease;
+                pointer-events: all;
             }
 
             .card__button:hover {

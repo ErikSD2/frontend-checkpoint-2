@@ -71,6 +71,8 @@ class HeaderComponent extends HTMLElement {
         })})
         let loginButton = this.shadowRoot.querySelector('[data-login]');
         loginButton.addEventListener('click', () => {
+            let body = document.querySelector('body');
+            body.classList.add('overflow');
             this.login();
         })
     }
