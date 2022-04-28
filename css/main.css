@@ -21,9 +21,7 @@ body {
   scroll-padding-top: 40px;
 }
 
-.overflow {
-  overflow: hidden;
-}
+.overflow { overflow: hidden; }
 
 body {
   margin: 0;

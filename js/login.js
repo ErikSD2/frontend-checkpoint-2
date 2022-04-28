@@ -1,7 +1,6 @@
 let backdrop = document.querySelector('.backdrop');
 backdrop.addEventListener('click', () => {
-    let login = document.querySelector('.backdrop');
-    login.classList.add('displayNone');
+    backdrop.classList.add('displayNone');
 
     let body = document.querySelector('body')
     body.classList.remove('overflow');
