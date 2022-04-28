@@ -6,10 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DH Flix</title>
     <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/modal.css" />
   </head>
 
   <body>
     <header>
+      <div class="backdrop displayNone">
+        <div class="modal-container">
+          <div class="photo">
+            <img class="modal-img" src="./assets/img/image 1.svg" alt="">
+          </div>
+          <div class="login">
+            <div class="label">
+              <label for="login">Email</label>
+              <input type="mailtoo" name="mailtoo">
+    
+              <label for="password">Senha</label>
+              <input type="password">
+            </div>
+              <button class="modal__button">Entrar</button>
+          </div>
+        </div>
+      </div>
       <header-component class="header"></header-component>
       <div class="photo">
         <img id="image" src="./assets/img/image 9.svg" alt="" />
@@ -63,6 +81,7 @@
 
     <script src="./js/components/footer.js"></script>
     <script src="./js/components/header.js"></script>
+    <script src="./js/login.js"></script>
     <script src="./js/filme.js"></script>
   </body>
 </html>

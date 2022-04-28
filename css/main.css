@@ -140,10 +140,6 @@ header {
   margin: auto;
 }
 
-.description {
-  line-height: 3px;
-}
-
 .description h2 {
   font-size: 65px;
   font-family: "Roboto", sans-serif;
@@ -192,6 +188,13 @@ header {
   line-height: 1%;
   justify-content: space-between;
   font-family: "Roboto", sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+  .authors {
+    flex-direction: column;
+    gap: 16px;
+  }
 }
 
 .video h1 {

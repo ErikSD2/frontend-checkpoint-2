@@ -12,7 +12,7 @@ if( id == null ) {
 let imgImage = document.querySelector('#image');
 imgImage.src = image;
 
-let divTitle = document.querySelector('title');
+let divTitle = document.querySelector('#title');
 divTitle.innerHTML = title;
 
 let divPlot = document.querySelector('#plot');
@@ -22,17 +22,26 @@ let divDirector = document.querySelector('.director__name');
 let achorDirector = document.createElement('a');
 achorDirector.setAttribute('href', '#');
 achorDirector.classList.add('elenco');
-achorDirector.innerHTML = directors;
+achorDirector.innerHTML = directors || "Não há dados";
 if(!!divDirector) divDirector.appendChild(achorDirector);
 
 let divWriter = document.querySelector('.escritores__list');
-if(!!writerList) writerList.map(writer => {
-    let achorWriter = document.createElement('a');
-    achorWriter.setAttribute('href', '#');
-    achorWriter.classList.add('elenco');
-    achorWriter.innerHTML = writer.name;
-    divWriter.appendChild(achorWriter);
-})
+if(!!writerList) {
+    writerList.map(writer => {
+        let achorWriter = document.createElement('a');
+        achorWriter.setAttribute('href', '#');
+        achorWriter.classList.add('elenco');
+        achorWriter.innerHTML = writer.name;
+        divWriter.appendChild(achorWriter);
+    })
+    if (writerList.length == 0) {
+        let achorWriter = document.createElement('a');
+        achorWriter.setAttribute('href', '#');
+        achorWriter.classList.add('elenco');
+        achorWriter.innerHTML = "Não há dados";
+        divWriter.appendChild(achorWriter);
+    }
+}
 
 let youtube = document.querySelector('.youtube');
 let trailer = localStorage.getItem('trailer');
